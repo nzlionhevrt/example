@@ -1,11 +1,9 @@
 import sys,os
-stderr = sys.stderr
-sys.stderr = open(os.devnull, 'w')
 import  pandas as pd
+import nltk
 from nltk.tokenize import wordpunct_tokenize
 from nltk.corpus import stopwords
 nltk.download('stopwords')
-sys.stderr = stderr
 #инициализируем стоп слова и символы
 stop = set(stopwords.words('russian'))
 stop.update(['.', ',', '"', "'", '?', '!', ':', ';', '(', ')', '[', ']', '{', '}','#','№'])
